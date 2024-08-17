@@ -1,0 +1,41 @@
+How to set Path and Hello World Program
+
+
+Java Programming Language 
+-------------------------
+
+1> Installation of Java 
+2> Setting up the path 
+3> Program to Print Hello World
+
+
+
+
+Download jdk 1.8 => 
+--------------------
+
+Your documentation is mostly accurate, but there are a few points that could be refined or clarified:
+
+1. Founders: The key figures in the creation of Java were indeed James Gosling, Mike Sheridan, and Patrick Naughton. However, it's worth noting that the broader team involved was referred to as the "Green Team."
+
+2. Project Names and Evolution:
+   - The initial project name was "Green," but it was later named "Oak." When "Oak" was found to be a trademark, the name was changed to "Java."
+   - Java was designed for embedded systems but quickly shifted focus to application development.
+
+3. Name Origin: The name "Java" was indeed inspired by Java coffee, reflecting the project's intended approach to being dynamic and energizing, much like coffee.
+
+4. Logo: The Java logo is a steaming cup of coffee, symbolizing the name's origin.
+
+5. Corporate Popularity: Java has been a dominant language in corporate environments due to its stability and long-term support, although Python has gained popularity in recent years, especially in fields like data science and machine learning.
+
+6. Release Schedule: Java has followed a time-driven release model since Java 9, with new versions coming out every six months.
+
+7. Long-Term Support: JDK 8 is a long-term support release, meaning it receives updates and support for an extended period, compared to regular releases.
+
+8. Interview Focus: While JDK 7, 8, and 9 concepts might not be as commonly tested in interviews today, understanding these versions' key features can still be valuable.
+
+9. Version Compatibility: It is accurate that code compiled with a newer JDK version may not run on older JDK versions if it uses features introduced in those newer versions.
+
+10. Ownership: Java was originally developed by Sun Microsystems and is now owned by Oracle Corporation following its acquisition of Sun Microsystems in 2010.
+
+    Overall, the documentation provides a good historical overview of Java but should clarify the context and provide more precise details about some aspects.

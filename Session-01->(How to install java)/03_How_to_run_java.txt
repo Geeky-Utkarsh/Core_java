@@ -1,0 +1,10 @@
+To run java 
+------------------------------------------------------
+
+1> Download its JDK 
+
+2> Open bin folder in the {bin} folder inside the java-jdk folder 
+
+3> Search for java.exe and javac.exe file in {bin} folder
+
+4> 
