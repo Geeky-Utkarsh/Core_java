@@ -14,8 +14,6 @@ Java Programming Language
 Download jdk 1.8 => 
 --------------------
 
-Your documentation is mostly accurate, but there are a few points that could be refined or clarified:
-
 1. Founders: The key figures in the creation of Java were indeed James Gosling, Mike Sheridan, and Patrick Naughton. However, it's worth noting that the broader team involved was referred to as the "Green Team."
 
 2. Project Names and Evolution:
