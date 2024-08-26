@@ -17,6 +17,7 @@ public class S3_6_Question_on_operator {
 
           ci=amt-p;
           System.out.println("Compund Interest =>"+amt);
+          System.out.println(ci);
 
      }
 }
