@@ -1,0 +1,38 @@
+Yes, Java provides several **logarithmic functions** through the **`Math` class**, which offers a variety of mathematical operations, including logarithms.
+
+### Key log functions in Java:
+1. **Natural Logarithm (`ln`)**:
+   - Use **`Math.log(double a)`** to compute the natural logarithm (logarithm to base **e**) of a number.
+   - Example:
+     ```java
+     double result = Math.log(10);  // Natural log of 10
+     System.out.println(result);    // Output: 2.302585092994046
+     ```
+
+2. **Logarithm to base 10**:
+   - Use **`Math.log10(double a)`** to compute the logarithm to base **10**.
+   - Example:
+     ```java
+     double result = Math.log10(100);  // Logarithm base 10 of 100
+     System.out.println(result);       // Output: 2.0
+     ```
+
+3. **Logarithm to arbitrary base**:
+   Java does not have a direct method for logarithms with an arbitrary base, but you can compute it using the formula:
+   \[
+   \text{log}_b(x) = \frac{\log_e(x)}{\log_e(b)}
+   \]
+   - Example (logarithm base 2):
+     ```java
+     double x = 32;
+     double base = 2;
+     double result = Math.log(x) / Math.log(base);  // Logarithm base 2 of 32
+     System.out.println(result);  // Output: 5.0
+     ```
+
+### Summary:
+- **`Math.log(double a)`** for natural logarithms (base **e**).
+- **`Math.log10(double a)`** for logarithms to base 10.
+- For other bases, use the formula: `Math.log(x) / Math.log(base)`.
+
+These functions are part of Java’s **`java.lang.Math`** class and are widely used in mathematical calculations.
