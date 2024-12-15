@@ -1,0 +1,113 @@
+**`System.in`** and its role in the `Scanner` constructor.
+
+---
+
+1. What is `System.in`?
+- `System.in` is a **predefined InputStream** in Java, provided by the `java.lang` package.
+- It represents the **standard input stream**, which typically means the **keyboard input** in a console-based application.
+- You can think of it as a low-level stream that reads raw bytes of data.
+
+---
+
+2. Why is `System.in` passed to the `Scanner` constructor?
+The `Scanner` class is designed to process **tokenized input** (like integers, strings, doubles, etc.), but it needs a source to read from. That source is provided to the `Scanner` constructor, and in this case, the source is `System.in`.
+
+Here’s how it works:
+
+- **`System.in` provides the raw input stream** (raw bytes of data) from the console.
+- The `Scanner` constructor wraps around this `InputStream` to convert the raw input into a more **human-friendly format** (like `int`, `double`, `String`, etc.).
+
+
+
+ **How does this help the `Scanner` constructor?**
+The `Scanner` class internally reads from the input stream provided (e.g., `System.in`) and processes it. For example:
+
+1. **Reading raw input:**
+   The `Scanner` constructor receives the `InputStream` (`System.in`) and reads raw bytes of input.
+
+2. **Processing and tokenizing input:**
+   The `Scanner` parses these bytes into meaningful tokens (like words or numbers) based on the delimiter (default is whitespace).
+
+   For instance:
+   ```java
+   Scanner sc = new Scanner(System.in);
+   int number = sc.nextInt();  // Processes and converts bytes into an integer.
+   ```
+
+---
+
+### **3. What if we don’t use `System.in`?**
+If you don’t provide `System.in` or any other valid input source, the `Scanner` won't know where to read from. You could, however, pass other sources to the `Scanner` constructor, such as a file or a string. Examples:
+
+- **Reading from a string:**
+  ```java
+  Scanner sc = new Scanner("123 456");
+  int a = sc.nextInt();  // Reads 123
+  int b = sc.nextInt();  // Reads 456
+  ```
+
+- **Reading from a file:**
+  ```java
+  File file = new File("data.txt");
+  Scanner sc = new Scanner(file);
+  ```
+
+So, `System.in` is just one type of input source. It tells the `Scanner` to read from the keyboard.
+
+---
+
+### **4. What happens inside the `Scanner` constructor?**
+When you pass `System.in` to the `Scanner` constructor:
+
+1. **`System.in` is wrapped in a `ReadableByteChannel`:**  
+   Internally, the `Scanner` uses an abstraction that handles input streams, such as files, strings, or the console.
+
+2. **Buffering for efficiency:**  
+   The `Scanner` reads data from `System.in` in chunks (using a buffer) to optimize performance.
+
+3. **Tokenization:**  
+   The raw bytes are processed into tokens (words, numbers, etc.) based on delimiters.
+
+---
+
+### **Example to Illustrate:**
+Let’s see how `System.in` is used to make input easier:
+
+Without `Scanner` (using raw `System.in`):
+```java
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        System.out.println("Enter a number: ");
+        int data = System.in.read();  // Reads a single byte (raw data)
+        System.out.println("You entered: " + (char) data);
+    }
+}
+```
+
+- Here, `System.in.read()` only reads one byte, so you need to handle the conversion yourself. For example, parsing multiple bytes into an integer.
+
+With `Scanner` (simplified input):
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  // Wraps System.in
+        System.out.println("Enter a number: ");
+        int number = sc.nextInt();  // Reads and parses the input
+        System.out.println("You entered: " + number);
+        sc.close();
+    }
+}
+```
+
+- The `Scanner` automates the hard work of parsing and tokenizing.
+
+---
+
+### **Key Takeaways:**
+1. **`System.in` provides the raw input stream** (keyboard input).
+2. The `Scanner` constructor **wraps and processes** `System.in` to read and tokenize input easily.
+3. `System.in` is just one type of input source; you can also use files or strings with `Scanner`.
