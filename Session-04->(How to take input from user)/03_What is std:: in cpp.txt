@@ -4,26 +4,24 @@
 
 ---
 
- **Why use `std::string::npos`?**
+ Why use `std::string::npos`?
 - `std::string::npos` is a **static constant** in the `std::string` class that represents a value for "not found."
 - If you don’t use `std::` or explicitly include `string`’s scope, the compiler doesn’t know which `npos` you're referring to, leading to **errors** or **ambiguity**.
 
 ---
 
- **Why is it necessary in some cases?**
+ Why is it necessary in some cases?
 - Without `std::`, the compiler can’t resolve the correct scope, especially in large projects with multiple namespaces.
 - Example:
-  ```cpp
+  
   if (f.find(abc) != std::string::npos)  // Compiler knows npos belongs to std::string
-  ```
-  **Error if omitted:**
-  - `npos` might be undefined if you don’t clarify it belongs to `std::string`.
+  
+  Error if omitted:
+  -  npos might be undefined if you don’t clarify it belongs to std::string.
 
 ---
 
- **In Short**
-The `std::` is necessary to:
-1. **Resolve ambiguity** about which class, function, or constant you’re referring to.
-2. **Avoid conflicts** when there are similar names in different namespaces.
-
-Let me know if you'd like examples! 😊
+ In Short
+The std:: is necessary to:
+1. Resolve ambiguity about which class, function, or constant you’re referring to.
+2. Avoid conflicts when there are similar names in different namespaces.
