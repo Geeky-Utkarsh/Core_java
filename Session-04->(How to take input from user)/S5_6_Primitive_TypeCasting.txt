@@ -1,0 +1,29 @@
+
+
+                            Primitive Type Casting 
+                            ----------------------
+
+
+                            DataTypes 
+                              |
+                -------------------------------------
+                |                                   |
+                |                                   |
+        Primitive DataTypes                 non primitive dataTypes 
+                |                                   |
+            primitive                           upcasting & downcasting 
+            type casting                           
+
+
+
+
+    Primitive typecasting -> Conversion of one dataType into another datatyoe is known as primitive type casting, but make sure both are of primitive datatypes 
+
+
+    Types of primitive type casting 
+    
+     There are 2 types 
+
+    a> Implicit type casting 
+    b> Explicit type casting
+    

@@ -1,0 +1,6 @@
+import java.lang.system 
+
+1> This is a default package  in java , it contains classes like System.out.println() 
+
+2> It does matter if we import it or not , we can still use it
+

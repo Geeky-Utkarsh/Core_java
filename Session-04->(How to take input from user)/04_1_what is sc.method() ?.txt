@@ -1,0 +1,27 @@
+What does `sc.nextInt()` do?
+
+1. `sc` is the Scanner object:
+   - It reads input from `System.in` (keyboard input stream).
+
+2. **`nextInt()` is a method in the Scanner class**:
+   - It **reads the next token (chunk of input)** from the input stream and **parses it into an integer**.
+   - The token must be a valid integer; otherwise, it throws an exception (`InputMismatchException`).
+
+3. **How it works**:
+   - The `Scanner` object scans the input buffer for the next integer and moves the cursor forward after reading it.
+
+---
+
+Example:
+java
+Scanner sc = new Scanner(System.in);
+int number = sc.nextInt(); // Reads an integer from user input
+
+
+- If you input `42`, `nextInt()` parses it as the integer `42`.
+
+---
+
+In Short
+- `sc.nextInt()` **reads and converts** the next token in the input to an `int`. 
+- If the input isn't an integer, it throws an exception.

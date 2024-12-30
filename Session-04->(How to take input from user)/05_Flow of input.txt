@@ -1,0 +1,55 @@
+### **The Flow of Input in `Scanner` with `sc.nextInt()`**
+
+Let’s break it step-by-step to make it clear:
+
+---
+
+### **1. `System.in` (Input Stream)**  
+- **What is it?**  
+  - It is the **standard input stream** that captures keyboard input (raw data) as a stream of bytes.
+- **Role:**  
+  - It provides the raw data (unprocessed) to the `Scanner` class.  
+
+---
+
+### **2. `Scanner` Constructor**  
+- **What happens?**  
+  - When you create a `Scanner` object (e.g., `Scanner sc = new Scanner(System.in)`), the `Scanner` is **linked** to `System.in`.  
+  - This means the `Scanner` can now read and process the raw data (bytes) from the keyboard input.  
+  - The data is not processed or stored yet—`Scanner` is just ready to work with `System.in`.
+
+---
+
+### **3. `sc.nextInt()` Method**  
+- **Role of `nextInt()`:**  
+  - The `nextInt()` method **activates the Scanner** to process the input from `System.in`. Here's what it does step by step:
+    1. **Scans the Input:**  
+       It scans the raw input stream (from the keyboard) for the next **valid token**. A token is a meaningful chunk of input (e.g., "123").
+    2. **Parses the Token:**  
+       It tries to convert the token into an integer. If successful, it returns the integer. If not, it throws an `InputMismatchException`.  
+    3. **Moves the Cursor:**  
+       After reading the token, it advances the cursor to the next input.  
+
+---
+
+### **Key Points:**
+1. `System.in`: Supplies raw data (bytes) from the keyboard.  
+2. `Scanner sc`: Acts as an **interpreter** that processes the raw input.  
+3. `sc.nextInt()`:  
+   - Reads the input, processes it, and extracts the next integer token.  
+   - Only **when you call** `nextInt()` does the Scanner actually process the input.
+
+---
+
+### **Flow Diagram:**
+1. **Keyboard Input** → Raw Bytes → `System.in` →  
+2. Passed to **Scanner** (`Scanner sc = new Scanner(System.in)`) →  
+3. **`sc.nextInt()` reads and converts** → Returns an `int`.
+
+---
+
+### **In Short:**
+1. `System.in` → Supplies raw data.  
+2. `Scanner` → Prepares to process input.  
+3. `sc.nextInt()` → Reads, converts, and returns the next integer.
+

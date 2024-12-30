@@ -1,8 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-// Program to swap 2 number using 3rd variable 
-
-public class S4_1_Swap {
+public class S4_2_Swap_without_temp_var {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
 
@@ -14,14 +12,13 @@ public class S4_1_Swap {
 
         System.out.println("Before swapping :\na : "+a+"\nb : "+b);
 
-        // logic to swap 
-        int tmp=a;
-        a=b;
-        b=tmp;
-        
-        System.out.println("Value After swap  a=> "+a+"\nValue of b=> "+b);
+        // Logic to do swapping 
+        a=a^b;
+        b=a^b;
+        a=a^b;
 
+        System.out.println("After swapping :\na : "+a+"\nb : "+b);
         sc.close();
-
-    }
+        
+    }    
 }
